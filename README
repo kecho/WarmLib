@@ -1,8 +1,8 @@
 ==================================================
 ~~~~~~~~~~~~~~~~~~~WarmLib~~~~~~~~~~~~~~~~~~~~~~~~
+cross platform process worker pool manager library
 ==================================================
 
-cross platform process worker pool manager library
 
 WarmLib is a cross platform multiprocess manager library that provides the developers
 easy ways to:
@@ -12,11 +12,11 @@ easy ways to:
 - Programatically providing c++ classes / event listeners / interfaces to manage / send and receive jobs from 
   the custom plugin running under a worker pool.
 
-oooooooooooo Notes ooooooooooooooooooooooooooooooo
+oooooooooooo NOTES oooooooooooooooooooooooooooooooo
 (WINDOWS DEVELOPMENT IS CURRENTLY INCONCLUSIVE)
 (Linux development is currently complete)
 
-oooooooooooo To Build in Linux ooooooooooooooooooo
+oooooooooooo To Build in Linux oooooooooooooooooooo
 cd to the linux dir. Execute make command:
 make
 
@@ -25,7 +25,7 @@ cd to build/Examples and run the primegenerator executable to see how it works.
 
 Inspect the linux/Examples make files to see how to link and build with your library
 
-ooooooooooo To Build in Windows oooooooooooooooooo
+ooooooooooo To Build in Windows ooooooooooooooooooo
 cd to the windows dir. Open the Solution and compile
 WARNING: windows development is still in progress, might not even compile :(
 
