@@ -1,3 +1,8 @@
+// Kleber Garcia (c)
+/*
+This is the main worker instance entry point. Its meant to be called programmatically
+from a WarmWorkerPoolManager
+*/
 #include <iostream>
 #include <stdio.h>
 #include "WarmWorker.h"
