@@ -2,15 +2,17 @@
 ~~~~~~~~~~~~~~~~~~~WarmLib~~~~~~~~~~~~~~~~~~~~~~~~
 ==================================================
 
-cross platform multiprocess worker manager library
+cross platform process worker pool manager library
 
-WarmLib is a cross platform multiprocess manager library that provides the developers to easily:
+WarmLib is a cross platform multiprocess manager library that provides the developers
+easy ways to:
 
-- Develop plugins that attach to a worker process
-- Programatically providing tools (via the API) to manage jobs sent to such plugins
-- Programatically prividing classes and event listeners to handle plugin state changes / job notifications
+- Create a programatically manageble process worker pool
+- Develop plugins that attach to a WarmLib worker process from this worker pool for custom jobs
+- Programatically providing c++ classes / event listeners / interfaces to manage / send and receive jobs from 
+  the custom plugin running under a worker pool.
 
-
+oooooooooooo Notes ooooooooooooooooooooooooooooooo
 (WINDOWS DEVELOPMENT IS CURRENTLY INCONCLUSIVE)
 (Linux development is currently complete)
 
