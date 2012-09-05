@@ -177,14 +177,19 @@ MUTEX_NAME_BUFFER_SZ	HotQ/platform/posix/PosixMutex.h	6;"	d
 MUTEX_TIMEOUT	HotQ/platform/posix/PosixMutex.h	7;"	d
 OUTGOING_CONNECTION_ID	WarmLib/WarmWorkerMain.cpp	9;"	d	file:
 OnError	WarmLib/WarmWorkerPoolManager.cpp	/^void WarmLib::WarmWorkerPoolManager::OnError(int workerId, WarmLib::Error error)$/;"	f	class:WarmLib::WarmWorkerPoolManager
+OnJobStarted	WarmLib/WarmWorkerPoolManager.cpp	/^void ThreadSafeListener::OnJobStarted(int workerId)$/;"	f	class:ThreadSafeListener
 OnMessage	WarmLib/WarmWorker.cpp	/^bool WarmLib::WarmWorker::OnMessage(const WarmLib::WarmWorkerMessage& message)$/;"	f	class:WarmLib::WarmWorker
 OnMessage	WarmLib/WarmWorkerPoolManager.cpp	/^bool WarmLib::WarmWorkerPoolManager::OnMessage(const WarmLib::WarmWorkerMessage& message)$/;"	f	class:WarmLib::WarmWorkerPoolManager
 OnShutdown	WarmLib/WarmWorkerPoolManager.cpp	/^void WarmLib::WarmWorkerPoolManager::OnShutdown(int workerId)$/;"	f	class:WarmLib::WarmWorkerPoolManager
 OnSignalStart	WarmLib/WarmWorkerPoolManager.cpp	/^void WarmLib::WarmWorkerPoolManager::OnSignalStart(int workerId)$/;"	f	class:WarmLib::WarmWorkerPoolManager
+OnWorkerError	WarmLib/WarmWorkerPoolManager.cpp	/^void ThreadSafeListener::OnWorkerError(int workerId, WarmLib::Error error)$/;"	f	class:ThreadSafeListener
+OnWorkerJobFinished	WarmLib/WarmWorkerPoolManager.cpp	/^void ThreadSafeListener::OnWorkerJobFinished(int workerId, const void * jobResponse)$/;"	f	class:ThreadSafeListener
 OnWorkerJobFinished	WarmLib/WarmWorkerPoolManager.h	/^    template <typename jobtype, typename jobresponse> void WarmWorkerPool<jobtype, jobresponse>::Listener::OnWorkerJobFinished(int workerId, const void * response)$/;"	f	class:WarmLib::WarmWorkerPool::Listener
 PLUGIN_ARG	WarmLib/WarmWorkerMain.cpp	7;"	d	file:
 PLUGIN_NAME_BUFF_SIZE	WarmLib/WarmWorkerPoolManager.h	12;"	d
 PROCESS_NAME_BUFFER_SIZE	HotQ/platform/posix/PosixProcess.h	5;"	d
+PluginMain	ColdSdk/platform/posix/PosixPluginLoader.cpp	/^int PosixColdSdkPlugin::PluginMain(int inputBufferSize, const char * inputBuffer, int outputBufferSize, char * outputBuffer)$/;"	f	class:PosixColdSdkPlugin
+PluginMain	ColdSdk/platform/win/WinPluginLoader.cpp	/^int WinPlugin::PluginMain(int inputBufferSize, const char * inputBuffer, int outputBufferSize, char * outputBuffer)$/;"	f	class:WinPlugin
 PosixColdSdkPlugin	ColdSdk/platform/posix/PosixPluginLoader.cpp	/^PosixColdSdkPlugin::PosixColdSdkPlugin (void * handle, ColdSdk::ColdPlugin * implementation)$/;"	f	class:PosixColdSdkPlugin
 PosixColdSdkPlugin	ColdSdk/platform/posix/PosixPluginLoader.cpp	/^class PosixColdSdkPlugin : public ColdSdk::ColdPlugin$/;"	c	file:
 PosixMutex	HotQ/platform/posix/PosixMutex.cpp	/^HotQ::PosixMutex::PosixMutex(const char * mutexName)$/;"	f	class:HotQ::PosixMutex
@@ -211,8 +216,6 @@ Reset	HotQ/platform/posix/PosixSemaphore.cpp	/^void HotQ::PosixSemaphore::Reset(
 Reset	HotQ/platform/posix/PosixThreadMutex.cpp	/^void HotQ::PosixThreadMutex::Reset()$/;"	f	class:HotQ::PosixThreadMutex
 Reset	HotQ/platform/win/WinMutex.cpp	/^void HotQ::WinMutex::Reset()$/;"	f	class:HotQ::WinMutex
 Reset	HotQ/platform/win/WinProcessEvent.cpp	/^void HotQ::WinProcessEvent::Reset()$/;"	f	class:HotQ::WinProcessEvent
-Run	ColdSdk/platform/posix/PosixPluginLoader.cpp	/^int PosixColdSdkPlugin::Run(int bufferSize, const char * buffer)$/;"	f	class:PosixColdSdkPlugin
-Run	ColdSdk/platform/win/WinPluginLoader.cpp	/^int WinPlugin::Run(int bufferSize, const char * buffer)$/;"	f	class:WinPlugin
 Run	WarmLib/WarmWorkerManager.cpp	/^void * WarmLib::WarmWorkerManager::Run()$/;"	f	class:WarmLib::WarmWorkerManager
 Run	WarmLib/WarmWorkerMessageReceiver.cpp	/^void * WarmLib::WarmWorkerMessageReceiver::Run()$/;"	f	class:WarmLib::WarmWorkerMessageReceiver
 RunnableMain	HotQ/platform/win/WinThread.cpp	/^DWORD WINAPI HotQ::WinThread::RunnableMain(LPVOID threadPtr)$/;"	f	class:HotQ::WinThread
@@ -233,6 +236,8 @@ Start	HotQ/platform/win/WinThread.cpp	/^HotQ::HqError HotQ::WinThread::Start()$/
 StartWorker	WarmLib/WarmWorkerManager.cpp	/^bool WarmLib::WarmWorkerManager::StartWorker()$/;"	f	class:WarmLib::WarmWorkerManager
 StartWorkers	WarmLib/WarmWorkerPoolManager.cpp	/^void WarmLib::WarmWorkerPoolManager::StartWorkers()$/;"	f	class:WarmLib::WarmWorkerPoolManager
 State	WarmLib/WarmWorkerMessage.h	/^        struct State {$/;"	s	class:WarmLib::WarmWorkerMessage
+ThreadSafeListener	WarmLib/WarmWorkerPoolManager.cpp	/^    ThreadSafeListener(WarmLib::WarmWorkerPoolEventListener * listener)$/;"	f	class:ThreadSafeListener
+ThreadSafeListener	WarmLib/WarmWorkerPoolManager.cpp	/^class ThreadSafeListener : public WarmLib::WarmWorkerPoolEventListener$/;"	c	file:
 WARM_LIB_WORKER_BIN	WarmLib/WarmLibDefines.h	30;"	d
 WORKER_NUM_ARGS	WarmLib/WarmWorkerMain.cpp	6;"	d	file:
 WS_ERROR	WarmLib/WarmLibDefines.h	/^        WS_ERROR,$/;"	e	enum:WarmLib::WorkerState
@@ -325,6 +330,7 @@ mArgv	HotQ/platform/posix/PosixProcess.h	/^        char ** mArgv;$/;"	m	class:Ho
 mCachedMessageSize	HotQ/HotQBase.h	/^        int mCachedMessageSize;$/;"	m	class:HotQ::HotQBase
 mContainer	HotQ/HotQBase.h	/^        } mContainer;$/;"	m	class:HotQ::HotQBase	typeref:struct:HotQ::HotQBase::QContainer
 mDataMutex	HotQ/HotQBase.h	/^        HqMutex * mDataMutex;$/;"	m	class:HotQ::HotQBase
+mDecoration	WarmLib/WarmWorkerPoolManager.cpp	/^    WarmLib::WarmWorkerPoolEventListener * mDecoration;$/;"	m	class:ThreadSafeListener	file:
 mDequeueMutex	HotQ/HotQBase.h	/^        HqMutex * mDequeueMutex;$/;"	m	class:HotQ::HotQBase
 mEnqueueEvent	HotQ/HotQBase.h	/^        HqProcessEvent * mEnqueueEvent;$/;"	m	class:HotQ::HotQBase
 mEventHandle	HotQ/platform/win/WinProcessEvent.h	/^		HANDLE mEventHandle;$/;"	m	class:HotQ::WinProcessEvent
@@ -357,6 +363,7 @@ mMaxMessageSize	WarmLib/WarmWorkerMessageReceiver.h	/^        int mMaxMessageSiz
 mMessageBuffer	HotQ/HotQBase.h	/^            char * mMessageBuffer;$/;"	m	struct:HotQ::HotQBase::QContainer
 mMessageQueue	WarmLib/WarmWorkerManager.h	/^        HotQ::HotQInterface * mMessageQueue;$/;"	m	class:WarmLib::WarmWorkerManager
 mMutex	HotQ/platform/posix/PosixThreadMutex.h	/^        pthread_mutex_t mMutex; $/;"	m	class:HotQ::PosixThreadMutex
+mMutex	WarmLib/WarmWorkerPoolManager.cpp	/^    HotQ::HqMutex * mMutex;$/;"	m	class:ThreadSafeListener	file:
 mMutex	WarmLib/WarmWorkerThreadSafeStateBoard.h	/^        HotQ::HqMutex* mMutex;$/;"	m	class:WarmLib::WarmWorkerThreadSafeStateBoard
 mMutexHandle	HotQ/platform/win/WinMutex.h	/^		HANDLE mMutexHandle;$/;"	m	class:HotQ::WinMutex
 mMutexName	HotQ/platform/win/WinMutex.h	/^		char mMutexName[MAX_MUTEX_NAME_BUFF_SZ];$/;"	m	class:HotQ::WinMutex
@@ -372,6 +379,8 @@ mPluginName	WarmLib/WarmWorkerPoolManager.h	/^        char mPluginName[PLUGIN_NA
 mPoolId	WarmLib/WarmWorkerPoolManager.h	/^        short mPoolId;$/;"	m	class:WarmLib::WarmWorkerPoolManager
 mProcessName	HotQ/platform/posix/PosixProcess.h	/^        char mProcessName[PROCESS_NAME_BUFFER_SIZE];$/;"	m	class:HotQ::PosixProcess
 mQueue	WarmLib/WarmWorkerMessageReceiver.h	/^        HotQ::HotQInterface * mQueue;$/;"	m	class:WarmLib::WarmWorkerMessageReceiver
+mResponseBuffer	WarmLib/WarmWorker.h	/^        char* mResponseBuffer;$/;"	m	class:WarmLib::WarmWorker
+mResponseBufferSize	WarmLib/WarmWorker.h	/^        int  mResponseBufferSize;$/;"	m	class:WarmLib::WarmWorker
 mResponseQueue	WarmLib/WarmWorkerPoolManager.h	/^        HotQ::HotQInterface * mResponseQueue;$/;"	m	class:WarmLib::WarmWorkerPoolManager
 mResponseQueueId	WarmLib/WarmWorkerManager.h	/^        int mResponseQueueId;$/;"	m	class:WarmLib::WarmWorkerManager
 mResponseSize	WarmLib/WarmWorkerManager.h	/^        int mResponseSize;$/;"	m	class:WarmLib::WarmWorkerManager
@@ -422,6 +431,7 @@ main	WarmLib/WarmWorkerMain.cpp	/^int main(int argc, char ** argv)$/;"	f
 ~PosixShm	HotQ/platform/posix/PosixShm.cpp	/^HotQ::PosixShm::~PosixShm ()$/;"	f	class:HotQ::PosixShm
 ~PosixThread	HotQ/platform/posix/PosixThread.cpp	/^HotQ::PosixThread::~PosixThread()$/;"	f	class:HotQ::PosixThread
 ~PosixThreadMutex	HotQ/platform/posix/PosixThreadMutex.cpp	/^HotQ::PosixThreadMutex::~PosixThreadMutex()$/;"	f	class:HotQ::PosixThreadMutex
+~ThreadSafeListener	WarmLib/WarmWorkerPoolManager.cpp	/^    virtual ~ThreadSafeListener()$/;"	f	class:ThreadSafeListener
 ~WarmWorker	WarmLib/WarmWorker.cpp	/^WarmLib::WarmWorker::~WarmWorker()$/;"	f	class:WarmLib::WarmWorker
 ~WarmWorkerEventListener	WarmLib/WarmWorkerManager.h	/^        virtual ~WarmWorkerEventListener(){}$/;"	f	class:WarmLib::WarmWorkerEventListener
 ~WarmWorkerManager	WarmLib/WarmWorkerManager.cpp	/^WarmLib::WarmWorkerManager::~WarmWorkerManager()$/;"	f	class:WarmLib::WarmWorkerManager
