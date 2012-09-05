@@ -1,0 +1,5 @@
+Tests
+
+These are simple tests to verify minimal functionality of each of the components of WarmLibs
+There is a rule for this in the master makefile. 
+"make tests"

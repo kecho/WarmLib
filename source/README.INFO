@@ -1,0 +1,16 @@
+Main source file folder.
+Everything used by warmlibs is located here. The WarmLibs source is divided into three subcomponents:
+
+HotQ: everything needed for interprocess communication. Includes:
+
+- interprocess semaphores
+- interprocess mutexes
+- interprocess events
+- interprocess shared memory (shm)
+- interprocess blocking queue using the mentioned components above
+
+ColdSdk: SDK that plugins must use and implement. Please see the example how to use
+
+WarmLib: Where the magic happens, everything is put together on this library
+
+Kleber Garcia (c) 2012

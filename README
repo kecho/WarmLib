@@ -1,0 +1,34 @@
+==================================================
+~~~~~~~~~~~~~~~~~~~WarmLib~~~~~~~~~~~~~~~~~~~~~~~~
+==================================================
+
+cross platform multiprocess worker manager library
+
+WarmLib is a cross platform multiprocess manager library that provides the developers to easily:
+
+- Develop plugins that attach to a worker process
+- Programatically providing tools (via the API) to manage jobs sent to such plugins
+- Programatically prividing classes and event listeners to handle plugin state changes / job notifications
+
+
+(WINDOWS DEVELOPMENT IS CURRENTLY INCONCLUSIVE)
+(Linux development is currently complete)
+
+oooooooooooo To Build in Linux ooooooooooooooooooo
+cd to the linux dir. Execute make command:
+make
+
+cd to the build directory, you will find all the compiled libraries (.a files)
+cd to build/Examples and run the primegenerator executable to see how it works.
+
+Inspect the linux/Examples make files to see how to link and build with your library
+
+ooooooooooo To Build in Windows oooooooooooooooooo
+cd to the windows dir. Open the Solution and compile
+WARNING: windows development is still in progress, might not even compile :(
+
+
+Any questions, comments, suggestions kecho_garcia@hotmail.com
+
+
+Kleber Garcia (c) 2012

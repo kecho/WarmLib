@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\ColdSdk\ColdPlugin.h">
+      <Filter>ColdSdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\ColdSdk\ColdPluginImport.h">
+      <Filter>ColdSdk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\ColdSdk\ColdPluginExport.h">
+      <Filter>ColdSdk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="ColdSdk">
+      <UniqueIdentifier>{9168a29c-d949-42d5-aa49-3c54c9ae6a06}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ColdSdk\platform">
+      <UniqueIdentifier>{dc8b124c-f38e-42d1-90d0-511c3702ee3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ColdSdk\platform\win">
+      <UniqueIdentifier>{1e731143-fbb1-44cd-aae7-c794923fa3d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\ColdSdk\platform\win\WinPluginLoader.cpp">
+      <Filter>ColdSdk\platform\win</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\..\source\HotQ\HotQ.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqShm.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HotQBase.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqMessage.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqMutex.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqProcessEvent.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\platform\win\WinMutex.h">
+      <Filter>HotQ\platform\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\platform\win\WinProcessEvent.h">
+      <Filter>HotQ\platform\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\platform\win\WinShm.h">
+      <Filter>HotQ\platform\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqDefines.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\platform\win\WinThread.h">
+      <Filter>HotQ\platform\win</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqThread.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqThreadFactory.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\DefaultThreadFactory.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\source\HotQ\HqRunnable.h">
+      <Filter>HotQ</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="HotQ">
+      <UniqueIdentifier>{0d721b4e-03dc-4c86-8bb2-98f03ea25753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HotQ\platform">
+      <UniqueIdentifier>{2bd1baeb-18c9-40a7-9299-6914a710bc15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HotQ\platform\win">
+      <UniqueIdentifier>{fdceb8b1-92b7-4734-840e-034357de9352}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\source\HotQ\HotQBase.cpp">
+      <Filter>HotQ</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\HotQ\platform\win\WinMutex.cpp">
+      <Filter>HotQ\platform\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\HotQ\platform\win\WinProcessEvent.cpp">
+      <Filter>HotQ\platform\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\HotQ\platform\win\WinShm.cpp">
+      <Filter>HotQ\platform\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\HotQ\platform\win\WinThread.cpp">
+      <Filter>HotQ\platform\win</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\HotQ\DefaultThreadFactory.cpp">
+      <Filter>HotQ</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
