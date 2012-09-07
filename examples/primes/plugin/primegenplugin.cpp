@@ -94,7 +94,7 @@ public:
                 ++response->count;
             }
         }
-        delete buffer;
+        delete [] buffer;
 
 #if SIMULATE_DELAY
         sleep(6);
