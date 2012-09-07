@@ -30,7 +30,7 @@ WarmLib::WarmWorker::~WarmWorker()
     
     if (mResponseBuffer)
     {
-        delete mResponseBuffer;
+        delete [] mResponseBuffer;
     }
 }
 

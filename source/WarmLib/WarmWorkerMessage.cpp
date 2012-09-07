@@ -41,7 +41,7 @@ void WarmLib::WarmWorkerMessage::DestroyJobBuffer()
 {
     if (mState.mJobBuffer != 0)
     {
-        delete reinterpret_cast<char*>(mState.mJobBuffer);
+        delete [] reinterpret_cast<char*>(mState.mJobBuffer);
         mState.mJobBuffer = 0;
         mState.mJobBufferSize = 0;
     }

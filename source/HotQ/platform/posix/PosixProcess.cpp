@@ -50,7 +50,7 @@ void HotQ::PosixProcess::DestroyArgv()
             
             delete mArgv[i];
         }
-        delete mArgv;
+        delete [] mArgv;
         mArgc = 0;
         mArgv = 0;
     }
